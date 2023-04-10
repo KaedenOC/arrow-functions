@@ -168,12 +168,12 @@ Student.prototype.greeting = function() {
 
 
 
-Student.courseName = function() {
+Student.courseName = () => {
   return 'This student is enrolled in Code 301.';
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(Student.courseName());
+console.log(Student.courseName());
 
 
 
@@ -184,17 +184,17 @@ Student.prototype.scope = function() {
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// joe.scope();
+joe.scope();
 
 Student.prototype.scopeArrow = () => console.log(this);
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// joe.scopeArrow();
+joe.scopeArrow();
 
 // TODO: Write a COMMENT below to answer the following questions.
 // 1. What is "this" when joe.scope() is invoked?
-//
+//"this" is the object within the student constructor, which is an instance of the student constructor. The scope method is defined using a regular function expression.
 // 2. What is "this" when joe.scopeArrow() is invoked?
-//
+//"this" refers to the global object which is "window" in a browser environment. Arrow functions do not have their own "this" value.
 // 3. Explain why "this" is different when an arrow function is used.
-//
+//Arrow functions do not have their own "this" value, they do not bind "this" to the calling object.
